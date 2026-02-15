@@ -1,0 +1,16 @@
+@media (max-width: 864px) {
+  .nav-bar-header {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-bar-header a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+}
