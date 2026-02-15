@@ -7,7 +7,7 @@ import { IoCartOutline } from 'react-icons/io5';
 export default async function Cart() {
 
     const cookieStore = await cookies();
-    const res = await fetch('http://localhost:3000/api/cart-items', {
+    const res = await fetch('https://grocery-pak.vercel.app/api/cart-items', {
         cache: 'no-store',
         headers: {
             cookie: cookieStore.toString()

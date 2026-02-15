@@ -21,7 +21,7 @@ import React from "react";
 export default async function OrdersPage() {
     const cookieStore = await cookies()
 
-    const res = await fetch('http://localhost:3000/api/orders', {
+    const res = await fetch('https://grocery-pak.vercel.app/api/orders', {
         cache: 'no-store',
         headers: {
             cookie: cookieStore.toString()
