@@ -1,30 +1,5 @@
 'use client';
-
 import { useEffect, useState } from "react";
-
-// const orders = [
-//     {
-//         id: "ORD-1001",
-//         customer: "Ali Khan",
-//         date: "2026-02-14",
-//         total: "PKR 12,500",
-//         status: "Pending",
-//     },
-//     {
-//         id: "ORD-1002",
-//         customer: "Sara Ahmed",
-//         date: "2026-02-13",
-//         total: "PKR 8,200",
-//         status: "Shipped",
-//     },
-//     {
-//         id: "ORD-1003",
-//         customer: "Bilal Hussain",
-//         date: "2026-02-12",
-//         total: "PKR 15,000",
-//         status: "Delivered",
-//     },
-// ];
 
 const statusColors = {
     Pending: "bg-yellow-100 text-yellow-800",

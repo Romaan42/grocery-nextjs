@@ -3,9 +3,3 @@ export const getCartItems = async () => {
   const data = await res.json();
   return data;
 };
-
-export const getProducts = async () => {
-  const res = await fetch(`${process.env.BASE_URL}/api/product`);
-  const data = await res.json();
-  return data;
-};

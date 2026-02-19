@@ -6,7 +6,9 @@ import { getProducts } from "@/lib/getCartItems";
 
 export default async function AdminDashboard() {
 
-    const { data } = await getProducts();
+    const res = await fetch(`${process.env.BASE_URL}/api/product`);
+    const { data } = await res.json();
+
 
     return (
         <div className="flex w-full min-h-screen bg-slate-50/50">
