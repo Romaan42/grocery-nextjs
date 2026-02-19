@@ -7,7 +7,7 @@ import AddToCartMobile from "@/components/cart/AddToCartMobile";
 
 
 async function ProductsPage() {
-    const res = await fetch("https://grocery-pak.vercel.app/api/product")
+    const res = await fetch(`${process.env.BASE_URL}/api/product`)
     const products = await res.json()
 
     return (

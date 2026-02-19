@@ -2,8 +2,9 @@ import React from 'react'
 import Product from '../Product'
 
 export default async function AllProducts() {
-    const res = await fetch("https://grocery-pak.vercel.app/api/product")
+    const res = await fetch(`${process.env.BASE_URL}/api/product`)
     const products = await res.json()
+    console.log(products)
     if (!products.success) {
         return <h1 className='text-center text-2xl'>No products found</h1>
     }
