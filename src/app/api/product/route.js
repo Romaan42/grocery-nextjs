@@ -44,7 +44,6 @@ export const GET = async () => {
   try {
     await connectDb();
     const products = await Product.find();
-    console.log(products);
     return Response.json({ success: true, data: products });
   } catch (error) {
     return Response.json(
