@@ -9,8 +9,8 @@ export const getCartItemsCount = createAsyncThunk(
       });
       const data = await res.json();
 
-      if (data.success) {
-        return data.cartItems;
+      if (res.ok) {
+        return data.cartItems || [];
       }
 
       return rejectWithValue([]);
