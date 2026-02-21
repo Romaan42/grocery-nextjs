@@ -12,7 +12,7 @@ export const POST = async (request) => {
   const category = formData.get("category");
   const desc = formData.get("description");
   const image = formData.get("image");
-  console.log(image);
+
   let imageUrl = null;
   if (image) {
     const result = await uploadOnCloud(image);
@@ -40,7 +40,7 @@ export const POST = async (request) => {
   if (imageUrl) {
     updateProductData.image = imageUrl;
   }
-  console.log({ title, price, category, desc, image });
+
   const product = await Product.findByIdAndUpdate(id, updateProductData);
 
   return Response.json({

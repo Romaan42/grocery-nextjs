@@ -28,7 +28,6 @@ const uploadOnCloud = async (file) => {
         .end(buffer);
     });
   } catch (error) {
-    console.log("Cloudinary error:", error);
     return null;
   }
 };

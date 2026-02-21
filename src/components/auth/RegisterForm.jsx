@@ -8,7 +8,7 @@ export default function RegisterForm() {
     const [message, setMessage] = useState(null)
 
     const [state, formAction, loading] = useActionState(registerUser);
-    console.log({ state, loading })
+
 
     useEffect(() => {
         if (state?.error) {

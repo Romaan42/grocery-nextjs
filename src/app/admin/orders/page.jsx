@@ -23,7 +23,7 @@ export default function OrdersPage() {
             })
             .catch((err) => console.error("Error fetching orders:", err));
     }, [])
-    console.log(orders)
+
     return (
         <div className="p-8">
             <h1 className="text-2xl font-bold mb-6">Admin Orders</h1>

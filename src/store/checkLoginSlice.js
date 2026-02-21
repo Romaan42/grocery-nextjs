@@ -3,13 +3,17 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const checkLoginUser = createAsyncThunk(
   "checklogin",
   async (_, { rejectWithValue }) => {
-    const res = await fetch("/api/get-user");
-    const data = await res.json();
-    if (data.login) {
-      return data.user;
-    }
+    try {
+      const res = await fetch("/api/get-user");
+      const data = await res.json();
+      if (data.login) {
+        return data.user;
+      }
 
-    return rejectWithValue(data.message);
+      return rejectWithValue(data.message);
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
   },
 );
 
