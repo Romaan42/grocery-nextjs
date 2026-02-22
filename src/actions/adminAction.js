@@ -1,5 +1,6 @@
 "use server";
 import checkAdminLogin from "@/lib/checkAdminLogin";
+import Product from "@/models/productModel";
 import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
 

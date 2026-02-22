@@ -12,13 +12,13 @@ export default function OrdersPage() {
     const [orders, setOrdersData] = useState([]);
 
     useEffect(() => {
-        fetch("/api/orders", {
+        fetch("/admin/api/orders", {
             credentials: "include",
         })
             .then((res) => res.json())
             .then((data) => {
                 if (data.success) {
-                    setOrdersData(data.ordersData);
+                    setOrdersData(data.orders);
                 }
             })
             .catch((err) => console.error("Error fetching orders:", err));

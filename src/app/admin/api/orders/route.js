@@ -10,7 +10,7 @@ export async function GET() {
       return Response.json({ message: "Unauthorized" }, { status: 401 });
     }
     const orders = await Checkout.find().sort({ createdAt: -1 });
-    return Response.json({ orders });
+    return Response.json({ success: true, orders });
   } catch (error) {
     return Response.json(
       { message: "Error fetching orders", error },
