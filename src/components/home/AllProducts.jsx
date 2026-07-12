@@ -11,7 +11,7 @@ export default async function AllProducts() {
         }
         return (
             <section className='grid lg:grid-cols-5 md:grid-cols-2 mt-10 gap-5'>
-                {products.data.map((val, i) => (
+                {products?.data?.map((val, i) => (
                     <Product key={i} product={val} />
                 ))}
             </section>

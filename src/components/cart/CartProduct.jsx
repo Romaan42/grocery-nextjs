@@ -52,7 +52,7 @@ export default function CartProduct({ item }) {
             <div className="text-right flex items-center gap-4">
                 <p className="text-xl font-black text-slate-900">${(item.price * item.qty).toFixed(2)}</p>
                 <button className="text-slate-300 hover:text-red-500 mt-2 transition-colors">
-                    <FaTrashAlt className='cursor-pointer -mt-2 text-red-400' size={24} onClick={() => removeItem(item.id)} />
+                    <FaTrashAlt className='cursor-pointer -mt-2 text-red-400' size={24} onClick={() => removeItem(item.cart_id)} />
                 </button>
             </div>
         </div>

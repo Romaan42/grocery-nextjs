@@ -25,7 +25,7 @@ async function ProductsPage() {
                 <section className="max-w-7xl mx-auto px-6 py-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                         {products?.data?.map((product) => (
-                            <div key={product._id} className="group bg-white rounded-3xl p-4 shadow-sm border border-transparent hover:border-gray-200 hover:shadow-md transition-all duration-300 relative">
+                            <div key={product.id} className="group bg-white rounded-3xl p-4 shadow-sm border border-transparent hover:border-gray-200 hover:shadow-md transition-all duration-300 relative">
 
                                 {/* Product Image Container */}
                                 <div className="relative w-full aspect-square bg-gray-50 rounded-2xl overflow-hidden mb-4">
@@ -37,7 +37,7 @@ async function ProductsPage() {
                                         className="object-contain p-4 group-hover:scale-105 transition-transform"
                                     />
                                     {/* Add to Cart Overlay (Optional) */}
-                                    <AddToCart id={product._id} />
+                                    <AddToCart id={product.id} />
                                 </div>
 
                                 {/* Details */}
@@ -64,7 +64,7 @@ async function ProductsPage() {
                                             <FaStar size={12} fill="currentColor" />
                                             {product.rating}
                                         </div>
-                                        <AddToCartMobile id={product._id} />
+                                        <AddToCartMobile id={product.id} />
                                     </div>
                                 </div>
                             </div>

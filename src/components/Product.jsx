@@ -39,7 +39,7 @@ export default function Product({ product }) {
         if (!user && !loading) {
             return router.push("/login")
         }
-        const data = await addToCart(product._id)
+        const data = await addToCart(product.id)
         if (data.success) {
             fetchCartItems()
             dispatch(getCartItemsCount())
@@ -73,7 +73,7 @@ export default function Product({ product }) {
                 <div className="absolute inset-x-0 bottom-0 p-4 md:translate-y-full transition-transform duration-300 group-hover:translate-y-0">
                     {cartLoading ? <div>loading...</div> :
                         <>
-                            {cartItems.some((val) => val._id === product._id) ? <button className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-bold text-sm shadow-xl active:scale-95 transition-all cursor-pointer hover:bg-slate-800">
+                            {cartItems.some((val) => val._id === product.id) ? <button className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-bold text-sm shadow-xl active:scale-95 transition-all cursor-pointer hover:bg-slate-800">
                                 Added
                             </button> : <button onClick={handleAddToCart} className="w-full bg-slate-900 text-white py-2.5 rounded-xl font-bold text-sm shadow-xl active:scale-95 transition-all cursor-pointer hover:bg-slate-800">
                                 Add to Cart

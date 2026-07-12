@@ -1,25 +1,9 @@
-import mongoose from "mongoose";
+import mysql2 from "mysql2/promise";
 
-const URL = process.env.MONGODB_URL;
+export const pool = mysql2.createPool({
+  uri: process.env.DB_URL,
+  ssl: { rejectUnauthorized: true },
+  decimalNumbers: true,
+});
 
-if (!URL) {
-  throw new Error("MONGODB_URL environment variable is not defined");
-}
-
-let cached = global.mongoose;
-
-if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
-}
-
-async function connectDb() {
-  if (cached.conn) {
-    return cached.conn;
-  }
-
-  cached.promise = cached.promise || mongoose.connect(URL);
-  cached.conn = await cached.promise;
-  return cached.conn;
-}
-
-export default connectDb;
+export default pool;

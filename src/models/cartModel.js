@@ -1,18 +1,25 @@
-import mongoose from "mongoose";
+// class Cart {
+//   constructor(id){
+//     this.id = id;
+//   }
 
-const cartItemSchema = new mongoose.Schema({
-  productId: {
-    type: mongoose.Schema.Types.ObjectId,
-  },
-  quantity: {
-    type: Number,
-    default: 1,
-  },
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-  },
-});
+// }
 
-const Cart = mongoose.models.Cart || mongoose.model("Cart", cartItemSchema);
+// import mongoose from "mongoose";
 
-export default Cart;
+// const cartItemSchema = new mongoose.Schema({
+//   productId: {
+//     type: mongoose.Schema.Types.ObjectId,
+//   },
+//   quantity: {
+//     type: Number,
+//     default: 1,
+//   },
+//   userId: {
+//     type: mongoose.Schema.Types.ObjectId,
+//   },
+// });
+
+// const Cart = mongoose.models.Cart || mongoose.model("Cart", cartItemSchema);
+
+// export default Cart;

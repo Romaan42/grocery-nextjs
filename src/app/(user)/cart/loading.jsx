@@ -1,4 +1,4 @@
-export default function Loader() {
+export default function Loading() {
     return (
         <div className="space-y-4">
             {[1, 2, 3].map((item) => (

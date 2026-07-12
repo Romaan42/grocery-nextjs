@@ -1,18 +1,20 @@
-import mongoose from "mongoose";
+class Checkout {
+  constructor(name, address, number, items, totalPrice, status) {
+    this.name = name;
+    this.address = address;
+    this.number = number;
+    this.items = items;
+    this.totalPrice = totalPrice;
+    this.status = status;
+  }
 
-const checkoutSchema = mongoose.Schema(
-  {
-    userId: mongoose.Types.ObjectId,
-    name: String,
-    address: String,
-    number: String,
-    items: [],
-    totalPrice: Number,
-    status: { type: String, default: "pending" },
-  },
-  { timestamps: true },
-);
+  save() {
+    console.log(this);
+  }
 
-const Checkout =
-  mongoose.models.Checkout || mongoose.model("Checkout", checkoutSchema);
+  static find() {
+    return [];
+  }
+}
+
 export default Checkout;

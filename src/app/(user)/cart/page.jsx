@@ -51,6 +51,7 @@ export default async function Cart() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
                     {/* 1. Items List (Left Side) */}
+
                     <div className="lg:col-span-2 space-y-6">
                         {cartItems?.length === 0 && (
                             <div className="text-center py-20">
@@ -59,14 +60,13 @@ export default async function Cart() {
                             </div>
                         )}
                         {cartItems?.map((item) => (
-                            <CartProduct key={item._id} item={item} />
+                            <CartProduct key={item.cart_id} item={item} />
                         ))}
 
                         <Link href="/" className="inline-flex items-center gap-2 text-slate-500 font-bold hover:text-orange-500 transition-colors mt-4">
                             ← Continue Shopping
                         </Link>
                     </div>
-
                     {/* 2. Order Summary (Right Side) */}
                     <div className="lg:col-span-1">
                         <div className="bg-slate-900 rounded-4xl p-8 text-white shadow-2xl sticky top-8">
